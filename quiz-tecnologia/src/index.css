@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@layer base {
+   :root {
+      --background: 250 25% 8%;
+      --foreground: 220 20% 95%;
+
+      --card: 250 20% 12%;
+      --card-foreground: 220 20% 95%;
+
+      --popover: 250 20% 12%;
+      --popover-foreground: 220 20% 95%;
+
+      --primary: 265 90% 60%;
+      --primary-foreground: 0 0% 100%;
+
+      --secondary: 200 100% 50%;
+      --secondary-foreground: 0 0% 100%;
+
+      --muted: 250 15% 18%;
+      --muted-foreground: 220 10% 55%;
+
+      --accent: 150 80% 50%;
+      --accent-foreground: 250 25% 8%;
+
+      --destructive: 0 84% 60%;
+      --destructive-foreground: 0 0% 100%;
+
+      --border: 250 15% 22%;
+      --input: 250 15% 22%;
+      --ring: 265 90% 60%;
+
+      --radius: 0.75rem;
+
+      --neon-purple: 265 90% 60%;
+      --neon-blue: 200 100% 50%;
+      --neon-green: 150 80% 50%;
+      --neon-pink: 330 90% 60%;
+      --neon-yellow: 50 100% 55%;
+
+      --gradient-quiz: linear-gradient(135deg, hsl(265 90% 60%), hsl(200 100% 50%));
+      --gradient-success: linear-gradient(135deg, hsl(150 80% 50%), hsl(200 100% 50%));
+      --gradient-card: linear-gradient(145deg, hsl(250 20% 14%), hsl(250 20% 10%));
+
+      --shadow-neon: 0 0 20px hsl(265 90% 60% / 0.3), 0 0 60px hsl(265 90% 60% / 0.1);
+      --shadow-neon-blue: 0 0 20px hsl(200 100% 50% / 0.3), 0 0 60px hsl(200 100% 50% / 0.1);
+      --shadow-card: 0 8px 32px hsl(0 0% 0% / 0.4);
+
+      --sidebar-background: 250 25% 8%;
+      --sidebar-foreground: 220 20% 95%;
+      --sidebar-primary: 265 90% 60%;
+      --sidebar-primary-foreground: 0 0% 100%;
+      --sidebar-accent: 250 15% 18%;
+      --sidebar-accent-foreground: 220 20% 95%;
+      --sidebar-border: 250 15% 22%;
+      --sidebar-ring: 265 90% 60%;
+   }
+}
+
+@layer base {
+   * {
+      @apply border-border;
+   }
+
+   body {
+      @apply bg-background text-foreground font-sans antialiased;
+      font-family: "Space Grotesk", sans-serif;
+   }
+
+   code,
+   pre {
+      font-family: "JetBrains Mono", monospace;
+   }
+}
+
+@layer utilities {
+   .text-gradient-primary {
+      @apply bg-clip-text text-transparent;
+      background-image: linear-gradient(135deg, hsl(265 90% 60%), hsl(200 100% 50%));
+   }
+
+   .text-gradient-success {
+      @apply bg-clip-text text-transparent;
+      background-image: linear-gradient(135deg, hsl(150 80% 50%), hsl(200 100% 50%));
+   }
+
+   .bg-gradient-primary {
+      background-image: linear-gradient(135deg, hsl(265 90% 60%), hsl(200 100% 50%));
+   }
+
+   .bg-gradient-success {
+      background-image: linear-gradient(135deg, hsl(150 80% 50%), hsl(200 100% 50%));
+   }
+
+   .bg-gradient-card {
+      background-image: linear-gradient(145deg, hsl(250 20% 14%), hsl(250 20% 10%));
+   }
+
+   .shadow-neon {
+      box-shadow: var(--shadow-neon);
+   }
+
+   .shadow-neon-blue {
+      box-shadow: var(--shadow-neon-blue);
+   }
+
+   .glow-border {
+      border: 1px solid hsl(265 90% 60% / 0.3);
+   }
+}

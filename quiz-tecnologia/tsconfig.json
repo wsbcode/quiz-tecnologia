@@ -1,0 +1,17 @@
+{
+   "compilerOptions": {
+      "target": "ESNext",
+      "module": "ESNext",
+      "moduleResolution": "bundler",
+      "jsx": "react-jsx", // ESSENCIAL: Adicione esta linha para o erro de JSX sumir
+      "baseUrl": ".",
+      "paths": {
+         "@/*": ["src/*"] // Resolve os erros de importação com '@/'
+      },
+      "types": ["vitest/globals", "node"],
+      "strict": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true
+   },
+   "include": ["src", "test"]
+}
